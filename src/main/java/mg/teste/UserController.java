@@ -1,5 +1,7 @@
 package mg.teste;
 
+import java.util.Map;
+
 import com.monframework.annotation.*;
 import com.monframework.core.ModelView;
 
@@ -29,9 +31,27 @@ public class UserController {
         return mv;
     }
 
+    @HandleUrl("/save-new")
+    @POST
+    public ModelView saveNew(Map<String, Object> data) {
+        ModelView mv = new ModelView("/result-sprint.jsp");
+        mv.addObject("method", "Nouvelle méthode (avec Map)");
+        mv.addObject("name", data.get("name"));
+        mv.addObject("email", data.get("email"));
+        mv.addObject("age", data.get("age"));
+        mv.addObject("allData", data); // Passer toutes les données
+        return mv;
+    }
+
     @HandleUrl("/test-methods")
     @GET
     public ModelView showTestMethodsPage(){
         return new ModelView("/test-method.jsp");
+    }
+
+    @HandleUrl("/test")
+    @GET
+    public ModelView showForm() {
+        return new ModelView("/form-test.jsp");
     }
 }
