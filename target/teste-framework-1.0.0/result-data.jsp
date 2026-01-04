@@ -66,7 +66,7 @@
             </div>
         </c:if>
         
-        <a href="/framework-java-1.0.0/api/test-methods">← Retour aux tests</a>
+        <a href="${pageContext.request.contextPath}/api/test-methods">← Retour aux tests</a>
     </div>
 </body>
 </html>
