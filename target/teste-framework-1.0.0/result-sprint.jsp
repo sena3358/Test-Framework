@@ -108,7 +108,7 @@
             if (allData != null && !allData.isEmpty()) { 
         %>
         <div class="all-data">
-            <h3>📦 Tous les paramètres dans la Map :</h3>
+            <h3>Tous les paramètres dans la Map :</h3>
             <% 
                 for (Map.Entry<String, Object> entry : allData.entrySet()) {
             %>

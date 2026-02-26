@@ -5,6 +5,8 @@ public class Employee {
     private String surname;
     private String position;
     private double salary;
+    private Department mainDepartment;
+    private Department[] departments;
 
     public Employee() {
     }
@@ -53,13 +55,44 @@ public class Employee {
         this.salary = salary;
     }
 
+    public Department getMainDepartment() {
+        return mainDepartment;
+    }
+    
+    public void setMainDepartment(Department mainDepartment) {
+        this.mainDepartment = mainDepartment;
+    }
+    
+    public Department[] getDepartments() {
+        return departments;
+    }
+    
+    public void setDepartments(Department[] departments) {
+        this.departments = departments;
+    }
+
     @Override
     public String toString() {
-        return "Employee{" +
-                "name='" + name + '\'' +
-                ", surname='" + surname + '\'' +
-                ", position='" + position + '\'' +
-                ", salary=" + salary +
-                '}';
+        StringBuilder sb = new StringBuilder("Employee{");
+        sb.append("name='").append(name).append('\'')
+          .append(", surname='").append(surname).append('\'')
+          .append(", position='").append(position).append('\'')
+          .append(", salary=").append(salary);
+        
+        if (mainDepartment != null) {
+            sb.append(", mainDepartment=").append(mainDepartment);
+        }
+        
+        if (departments != null && departments.length > 0) {
+            sb.append(", departments=[");
+            for (int i = 0; i < departments.length; i++) {
+                if (i > 0) sb.append(", ");
+                sb.append(departments[i]);
+            }
+            sb.append("]");
+        }
+        
+        sb.append('}');
+        return sb.toString();
     }
 }
