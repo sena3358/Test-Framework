@@ -1,7 +1,10 @@
 mg\teste\Main.class
 mg\teste\Employee.class
+mg\teste\Product.class
 mg\teste\TestController.class
 mg\teste\Department.class
+mg\teste\Order.class
+mg\teste\ApiController.class
 mg\teste\ParamTestController.class
 mg\teste\Dos.class
 mg\teste\RequestParamTestController.class
