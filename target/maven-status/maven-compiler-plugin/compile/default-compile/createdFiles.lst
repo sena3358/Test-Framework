@@ -5,6 +5,7 @@ mg\teste\TestController.class
 mg\teste\Department.class
 mg\teste\Order.class
 mg\teste\ApiController.class
+mg\teste\SessionDemoController.class
 mg\teste\ParamTestController.class
 mg\teste\Dos.class
 mg\teste\RequestParamTestController.class
