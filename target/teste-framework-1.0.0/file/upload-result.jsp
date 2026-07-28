@@ -92,6 +92,6 @@
         <p>Aucun fichier uploadé.</p>
     <% } %>
 
-    <a href="upload-form">← Retour au formulaire</a>
+    <a href="${pageContext.request.contextPath}/upload/form">← Retour au formulaire</a>
 </body>
 </html>
